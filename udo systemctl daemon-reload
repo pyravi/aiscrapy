@@ -1,0 +1,23 @@
+[0;1;32m●[0m gunicorn.service - gunicorn daemon
+     Loaded: loaded (/etc/systemd/system/gunicorn.service; static; vendor preset: enabled)
+     Active: [0;1;32mactive (running)[0m since Mon 2022-03-21 15:14:15 IST; 9min ago
+TriggeredBy: [0;1;32m●[0m gunicorn.socket
+   Main PID: 40506 (gunicorn)
+      Tasks: 4 (limit: 1147)
+     Memory: 86.9M
+     CGroup: /system.slice/gunicorn.service
+             ├─40506 /home/ubuntu/aiscrapy_website/env/bin/python /home/ubuntu/aiscrapy_website/env/bin/gunicorn --access-logfile - --workers 3 --bind unix:/run/gunicorn.sock website.wsgi:application
+             ├─40508 /home/ubuntu/aiscrapy_website/env/bin/python /home/ubuntu/aiscrapy_website/env/bin/gunicorn --access-logfile - --workers 3 --bind unix:/run/gunicorn.sock website.wsgi:application
+             ├─40509 /home/ubuntu/aiscrapy_website/env/bin/python /home/ubuntu/aiscrapy_website/env/bin/gunicorn --access-logfile - --workers 3 --bind unix:/run/gunicorn.sock website.wsgi:application
+             └─40510 /home/ubuntu/aiscrapy_website/env/bin/python /home/ubuntu/aiscrapy_website/env/bin/gunicorn --access-logfile - --workers 3 --bind unix:/run/gunicorn.sock website.wsgi:application
+
+Mar 21 15:14:15 ip-172-31-33-216 systemd[1]: gunicorn.service: Succeeded.
+Mar 21 15:14:15 ip-172-31-33-216 systemd[1]: Stopped gunicorn daemon.
+Mar 21 15:14:15 ip-172-31-33-216 systemd[1]: Started gunicorn daemon.
+Mar 21 15:14:15 ip-172-31-33-216 gunicorn[40506]: [2022-03-21 09:44:15 +0000] [40506] [INFO] Starting gunicorn 20.1.0
+Mar 21 15:14:15 ip-172-31-33-216 gunicorn[40506]: [2022-03-21 09:44:15 +0000] [40506] [INFO] Listening at: unix:/run/gunicorn.sock (40506)
+Mar 21 15:14:15 ip-172-31-33-216 gunicorn[40506]: [2022-03-21 09:44:15 +0000] [40506] [INFO] Using worker: sync
+Mar 21 15:14:15 ip-172-31-33-216 gunicorn[40508]: [2022-03-21 09:44:15 +0000] [40508] [INFO] Booting worker with pid: 40508
+Mar 21 15:14:15 ip-172-31-33-216 gunicorn[40509]: [2022-03-21 09:44:15 +0000] [40509] [INFO] Booting worker with pid: 40509
+Mar 21 15:14:15 ip-172-31-33-216 gunicorn[40510]: [2022-03-21 09:44:15 +0000] [40510] [INFO] Booting worker with pid: 40510
+Mar 21 15:15:20 ip-172-31-33-216 gunicorn[40510]:  - - [21/Mar/2022:09:45:20 +0000] "GET / HTTP/1.1" 200 22357 "-" "curl/7.68.0"
